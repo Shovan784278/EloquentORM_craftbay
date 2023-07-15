@@ -14,9 +14,10 @@ class DemoController extends Controller
 
     }
 
-    public function DataUpdate(Request $request){
+    public function BrandUpdate(Request $request){
 
-      return Brand::where('id',$request->id);
+      return Brand::where('id',$request->id)
+        ->update($request->input());
 
     }
 

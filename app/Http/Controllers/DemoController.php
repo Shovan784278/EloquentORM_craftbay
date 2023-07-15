@@ -21,4 +21,13 @@ class DemoController extends Controller
 
     }
 
+    public function UpdateOrCreate(Request $request){
+
+      Brand::updateOrCreate(
+        ['brandName'=> $request->brandName],
+        $request->input()
+      );
+
+    }
+
 }

@@ -25,3 +25,5 @@ Route::post('/create-brand',[DemoController::class, 'DemoAction']);
 Route::post('/update-brand/{id}',[DemoController::class, 'BrandUpdate']);
 
 Route::post('/create-update-brand/{brandName}',[DemoController::class, 'UpdateOrCreate']);
+
+Route::get('/delete-brand/{id}',[DemoController::class, 'delete']);

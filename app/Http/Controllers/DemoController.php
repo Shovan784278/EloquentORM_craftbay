@@ -30,4 +30,11 @@ class DemoController extends Controller
 
     }
 
+    public function delete(Request $request){
+
+      return Brand::where('id', $request->id)
+        ->delete();
+
+    }
+
 }

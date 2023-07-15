@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Brand;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class DemoController extends Controller
@@ -34,6 +35,19 @@ class DemoController extends Controller
 
       return Brand::where('id', $request->id)
         ->delete();
+
+    }
+
+    public function IncrementDecrement(){
+
+    //return Product::where('id', 1)->increment('price', 1000);
+
+    //return Product::where('id', 1)->increment('price'); //If we dont mention how much price i want to increse then it's increse 1
+
+    //return Product::where('id', 2)->decrement('price',200); //This is for decrement
+
+    return Product::where('id', 1)->decrement('price'); //If we dont mention how much price i want to decrese then it will decrese by 1 by 1.
+
 
     }
 
